@@ -1,0 +1,154 @@
+.container {
+  display: grid;
+  grid-template-columns: [first] 1fr [end];
+  grid-template-rows: [row1-start] 60px [row1-end row2-start] 180px [row2-end row3-start] 420px [row3-end row4-start] 120px [row4-end];
+  align-items: center;
+  background-color: #fbd2d7;
+  background-image: url(wallpaper.jpg);
+}
+
+.navbar {
+	display: grid;
+	grid-template-columns: [first] 640px [line2] 640px [end];
+  	grid-column-start: 1;
+  	grid-column-end: 2;
+  	font-family: Century gothic;
+  	color: #593221;
+  	position: top;
+  	align-items: center;
+}
+
+.navbar-part-1{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	display: inline-block;
+	text-align: left;
+	align-items: center;
+	background-color: #fcb99d;
+	padding-left: 20px;
+}
+
+.navbar-part-2{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	display: inline-block;
+	text-align: right;
+	align-items: center;
+	padding: 15px;
+	background-color: #fcb99d;
+}
+
+h2{
+	display: inline;
+	padding-right: 20px;
+}
+
+.part1{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: row2-start;
+	grid-row-end: row2-end;
+	display: inline-block;
+	text-align: center;
+	font-family: Century gothic;
+	font-size: 28px;
+	padding:50px;
+	background-color: #f7d9c3;
+	color: #593221;
+}
+
+h3{
+	display: inline;
+	margin: 0px;
+	font-size: 48;
+}
+
+p{
+	display: inline;
+	margin: 0px;
+}
+
+.part2{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: row3-start;
+	grid-row-end: row3-end;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	padding: 35px;
+}
+
+.homepage-image{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.image-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: Century gothic;
+	font-size: 18px;
+	text-align: center;
+	color: #593221;
+}
+
+.part3{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: row4-start;
+	grid-row-end: row4-end;
+	display: flex;
+	font-family: Century gothic;
+	align-items: center;
+	justify-content: center;
+	padding-top: 30px;
+	padding-left: 80px;
+	padding-bottom: 30px;
+	padding-right: 80px;
+	background-color: #f7d9c3;
+	color:#593221;
+}
+
+.button{
+	background-color: #fcb99d;
+  	border-radius: 10px;
+  	color: #593221;
+  	padding: 15px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	font-family: Century gothic;
+  	font-weight: bold;
+  	margin: 4px 2px;
+  	cursor: pointer;
+}
+
+a:link {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
