@@ -1,0 +1,171 @@
+.rolls-container {
+  display: grid;
+  grid-template-columns: [first] 1fr [end];
+  grid-template-rows: [row1-start] 60px [row1-end row2-start] 360px [row2-end row3-start] 360px [row3-end];
+  align-items: center;
+  background-color: #fbd2d7;
+  background-image: url(wallpaper.jpg);
+}
+
+.navbar {
+	display: grid;
+	grid-template-columns: [first] 640px [line2] 640px [end];
+  	grid-column-start: 1;
+  	grid-column-end: 2;
+  	font-family: Century gothic;
+  	color: #593221;
+  	position: top;
+  	align-items: center;
+}
+
+.navbar-part-1{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	display: inline-block;
+	text-align: left;
+	align-items: center;
+	background-color: #fcb99d;
+	padding-left: 20px;
+}
+
+.navbar-part-2{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	display: inline-block;
+	text-align: right;
+	align-items: center;
+	padding: 15px;
+	background-color: #fcb99d;
+}
+
+h2{
+	display: inline;
+	padding-right: 20px;
+}
+
+.rolls-part1{
+	display: grid;
+	grid-template-columns: 33.33% 33.33% 33.33%;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: row2-start;
+	grid-row-end: row2-end;
+	align-items: center;
+}
+
+.rolls-part2{
+	display: grid;
+	grid-template-columns: 33.33% 33.33% 33.33%;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: row3-start;
+	grid-row-end: row3-end;
+	align-items: center;
+}
+
+.original{
+	font-family: Century gothic;
+	font-size: 22px;
+	text-align: center;
+	background-color: #f7d9c3;
+	padding: 32px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #fcb99d;
+}
+
+.blueberry{
+	font-family: Century gothic;
+	font-size: 22px;
+	text-align: center;
+	background-color: #f7d9c3;
+	padding: 32px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #fcb99d;
+}
+
+.walnut{
+	font-family: Century gothic;
+	font-size: 22px;
+	text-align: center;
+	background-color: #f7d9c3;
+	padding: 32px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #fcb99d;
+}
+
+.original-gf{
+	font-family: Century gothic;
+	font-size: 22px;
+	text-align: center;
+	background-color: #f7d9c3;
+	padding: 32px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #fcb99d;
+}
+
+.pumpkin-spice{
+	font-family: Century gothic;
+	font-size: 22px;
+	text-align: center;
+	background-color: #f7d9c3;
+	padding: 32px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #fcb99d;
+}
+
+.caramel-pecan{
+	font-family: Century gothic;
+	font-size: 22px;
+	text-align: center;
+	background-color: #f7d9c3;
+	padding: 32px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #fcb99d;
+}
+
+h4{
+	margin: 0px;
+	color: #593221;	
+}
+
+.highlight{
+	background-color: #f7d9c3;
+  	border-radius: 10px;
+  	color: #593221;
+  	padding-right: 15px;
+  	padding-left: 15px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	margin: 0px;
+ }
+
+a:link {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
