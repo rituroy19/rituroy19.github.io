@@ -41,6 +41,13 @@ h2{
 	display: inline;
 	padding-right: 20px;
 }
+.cart{
+	padding-right:0px;
+}
+#cart-number{
+	font-weight: bolder;
+	font-size: 24px;
+}
 
 /*styling for page*/
 .walnut-product{
