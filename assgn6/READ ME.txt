@@ -1,0 +1,12 @@
+The wesbite has following pages, extra pages are marked.
+1. Home Page (html & css files)
+2. Product Browsing Page called Rolls (html & css files)
+3. Walnut Cinnamon Roll page as product detail page (html & css files)
+
+EXTRA
+4. About page (html & css files)
+5. Original Cinnamon Roll page (html & css files)
+6. Blueberry Cinnamon Roll page (html & css files)
+7. Original GF Cinnamon Roll page (html & css files)
+8. Pumpkin Spice Cinnamon Roll page (html & css files)
+9. Caramel Pecan Cinnamon Roll page (html & css files)
