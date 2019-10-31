@@ -1,0 +1,24 @@
+.navbar{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	top: 0;
+	width: 100%;
+	font-family: Arial;
+	position: fixed;
+	padding: 20px;
+}
+
+.navbar-inside{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 50%
+}
+
+.headliner{
+	margin-top: 50px;
+	text-align: center;
+}
