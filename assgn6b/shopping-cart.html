@@ -4,8 +4,9 @@
 			<title>Your Shopping Cart</title>
 			<!----styles---->
 			<link rel="stylesheet" type="text/css" href="shopping-cart.css">
+			<script src="shopping.js" async></script>
 		</head>
-		<body style="width: 1280px">
+		<body style="width: 1280px" onload="myFunction4(); myFunction5();">
 			<!----body as container---->
 			<div class="container">
 				<!---Navigation Bar Menu--->
@@ -25,7 +26,7 @@
 							<h2>Rolls</h2>
 						</a>
 						<a href="shopping-cart.html">
-							<h2>Cart</h2>
+							<h2 class="cart">Cart</h2> <a id="cart-number">(0)</a>
 						</a>
 					</div>
 				</div>
@@ -42,19 +43,25 @@
 							<h5>QUANTITY</h5>
 						</div>
 						<div class="billing-items-small-legends-3">
+							<h5>GLAZE</h5>
+						</div>
+						<div class="billing-items-small-legends-4">
 							<h5>PRICE</h5>
 						</div>
-						<div class="billing-items-actual-list-1">
-							<h3>Walnut Cinnamon Roll</h3>
-						</div>
-						<div class="billing-items-actual-list-2">
-							<h3>3</h3>
-						</div>
-						<div class="billing-items-actual-list-3">
-							<h3>$24</h3>
+						<!---One Single Areas for items--->
+						<div class="main-shopping-list" id="main-shopping-list">
+							<table id="myTable">
+								<tr>
+									<td class="first-column"> </td>
+									<td class="other-column"> </td>
+									<td class="other-column"> </td>
+									<td class="other-column"> </td>
+								</tr>
+							</table>
+							<br>
 						</div>
 						<div class="billing-items-final">
-							<h3>Total Price: $24</h3>
+							<h3 id="total-price"></h3>
 							<h3>Delivery in: 2 hours</h3>
 							<button class="button" type="button">Checkout</button>
 						</div>
@@ -62,18 +69,26 @@
 				<!----Section 2: Suggestions to buy more things---->
 					<div class="more-items">
 						<div class="more-items-header">
-							<h2>Items you may also like</h2>
+							<h2>Wishlist</h2>
 						</div>
 						<div class="more-items-images">
-							<img src="original.jpg" alt="Original Cinnamon Roll" style="width:150px;height:100px;">
-								<h3>Original Cinnamon Roll $5</h3>
-							<img src="blueberry.jpg" alt="blueberry Cinnamon Roll" style="width:150px;height:100px;">
-								<h3>Blueberry Cinnamon Roll $5</h3>
-							<img src="pumpkin-spice.jpg" alt="Pumpkin Spice Cinnamon Roll" style="width:150px;height:100px;">
-								<h3>Pumpkin Spice Cinnamon Roll $5</h3>
-							<img src="caramel-pecan.jpg" alt="Caramel Pecan Cinnamon Roll" style="width:150px;height:100px;">
-								<h3>Caramel Pecan Cinnamon Roll $5</h3>
-
+							<a href="original.html">
+								<img src="original.jpg" alt="Original Cinnamon Roll" style="width:150px;height:100px;">
+									<h3>Original Cinnamon Roll $5</h3>
+							</a>
+									<!----Link them to the respective product pages---->
+							<a href="blueberry.html">
+								<img src="blueberry.jpg" alt="blueberry Cinnamon Roll" style="width:150px;height:100px;">
+									<h3>Blueberry Cinnamon Roll $5</h3>
+							</a>
+							<a href="pumpkin-spice.html">
+								<img src="pumpkin-spice.jpg" alt="Pumpkin Spice Cinnamon Roll" style="width:150px;height:100px;">
+									<h3>Pumpkin Spice Cinnamon Roll $5</h3>
+							</a>
+							<a href="caramel-pecan.html">
+								<img src="caramel-pecan.jpg" alt="Caramel Pecan Cinnamon Roll" style="width:150px;height:100px;">
+									<h3>Caramel Pecan Cinnamon Roll $5</h3>
+							</a>
 						</div>
 					</div>
 				</div>
