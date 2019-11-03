@@ -4,9 +4,9 @@
 			<title>Walnut Cinnamon Roll</title>
 			<!---styles--->
 			<link rel="stylesheet" type="text/css" href="walnut.css">
-			<script src="main.js" async></script>
+			<script src="walnut.js" async></script>
 		</head>
-		<body style="width: 1280px">
+		<body style="width: 1280px" onload="myFunction5();">
 			<!---body as container--->
 			<div class="walnut-container">
 				<!---navigation bar--->
@@ -30,26 +30,28 @@
 						</a>
 					</div>
 				</div>
-				<div class="walnut-product">
+				<div class="walnut-product1">
+
 					<!---left column of page--->
 					<div class="description">
 						<a href="rolls.html">
-							<p style="text-align: left">Back to Rolls</p>
-						</a>
-						<br><br><br><br><br>
-						<img id="myImg" src="walnut.jpg" alt="Walnut Cinnamon Roll" style="width:450px;height:300px;padding-bottom:20px;">
-						<h4>This delicious cinnamon roll combines the nutty walnuts</h4>
-						<h4>from California Valley. The sweet spongy essence and</h4>
-						<h4>the firm nuts leave a crispy cinnamon roll experience.</h4>
+							<p style="text-align: left; padding:10px; padding-right:250px; padding-left:0px;">Back to Rolls</p>
+						</a><br><br>
+						<img id="myImg" src="walnut.jpg" alt="Walnut Cinnamon Roll" style="width:300px;height:200px;padding-bottom:20px;">
+						<h4>This delicious cinnamon roll combines the nutty walnuts from California Valley. The sweetspongy essence</h4>
+						<h4>and the firm nuts leave a crispy cinnamon roll experience.</h4>
 					</div>
+				</div>
+				<div class="walnut-product2">
 					<!---right column of page--->
 					<div class="order">
 						<h3>Walnut Cinnamon Roll</h3>
 						<h3>$8 per roll</h3><br><br>
-						<p>Ingredients include:</p>
-						<p>Wheat(allergen), Sugar,</p>
-						<p>Eggs, Walnuts, etc.</p><br>
-						<p>Goes with glaze: Vanilla-milk</p><br><br>
+						<p>Ingredients:</p>
+						<p>Wheat(allergen),</p>
+						<p>Sugar,</p>
+						<p>Eggs,</p>
+						<p>Walnuts</p><br><br>
 						<!---form for glaze--->
 						<h4>Add Glaze</h4>
 						<select id="mySelect1" name="glaze" onchange="myFunction1()">
@@ -58,7 +60,7 @@
   							<option value="vanilla-milk">Vanilla-milk</option>
   							<option value="double-chocolate">Double-chocolate</option>
 						</select><br>
-						<p id="demo1"></p><br><br>
+						<p id="demo1"></p><br>
 						<!---form for quantity--->
 						<h4>Add Quantity</h4>
 						<select id="mySelect2" name="quantity" onchange="myFunction2()">
@@ -67,9 +69,52 @@
   							<option value="6">6</option>
 		  					<option value="12">12</option>
 						</select><br>
-						<p id="demo2"></p><br><br>
-						<button class="button" type="button" onclick="myFunction3(); incrementCount()">Add to Cart</button><br>
+						<p id="demo2"></p><br>
+						<button class="button" type="button" onclick="myFunction3(); myFunction5()">Add to Cart</button><br>
 						<p id="demo3"></p>
+					</div>
+				</div>
+
+				<div class="walnut-product3">
+					<p style="text-align: left; padding:10px; padding-right:530px; padding-left:0px; margin-left: 100px;"> See more rolls:</p>
+					<div class="carousal">
+						<!-- Full-width images with number and caption text -->
+  						<div class="photo">
+    						<div class="numbertext">1 / 3</div>
+    						<a href="blueberry.html">
+    							<img src="blueberry.jpg" style="width:100%">
+    						</a>
+    						<div class="text">Blueberry Cinnamon Roll</div>
+  						</div>
+
+  						<div class="photo">
+    						<div class="numbertext">2 / 3</div>
+    						<a href="caramel-pecan.html">
+    							<img src="caramel-pecan.jpg" style="width:100%">
+    						</a>
+    						<div class="text">Caramel Pecan Cinnamon Roll</div>
+  						</div>
+
+  						<div class="photo">
+    						<div class="numbertext">3 / 3</div>
+    						<a href="original-gf.html">
+    							<img src="original-gf.jpg" style="width:100%; height: 200px;">
+    						</a>
+    						<div class="text">Original Cinnamon Roll</div>
+  						</div>
+
+  						<!-- Next and previous buttons -->
+  						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<br>
+
+						<!-- The dots/circles -->
+						<div style="text-align:center">
+  							<span class="dot" onclick="currentSlide(1)"></span>
+  							<span class="dot" onclick="currentSlide(2)"></span>
+  							<span class="dot" onclick="currentSlide(3)"></span>
+						</div>
 					</div>
 				</div>
 		</body>
