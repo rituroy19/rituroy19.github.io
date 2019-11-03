@@ -1,0 +1,212 @@
+/* for body as container*/
+.container {
+  display: grid;
+  grid-template-columns: [first] 1fr [end];
+  grid-template-rows: [row1-start] 60px [row1-end row2-start] 720px [row2-end];
+  align-items: center;
+  background-color: #fbd2d7;
+  background-image: url(wallpaper.jpg);
+}
+
+/*navigation bar styling*/
+.navbar {
+	display: grid;
+	grid-template-columns: [first] 640px [line2] 640px [end];
+  	grid-column-start: 1;
+  	grid-column-end: 2;
+  	grid-row-start: 1;
+  	grid-row-end: 2;
+  	font-family: Century gothic;
+  	color: #593221;
+  	position: top;
+  	align-items: center;
+}
+.navbar-part-1{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	display: inline-block;
+	text-align: left;
+	align-items: center;
+	background-color: #fcb99d;
+	padding-left: 20px;
+}
+.navbar-part-2{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	display: inline-block;
+	text-align: right;
+	align-items: center;
+	padding: 15px;
+	background-color: #fcb99d;
+}
+h2{
+	display: inline;
+	padding-right: 20px;
+}
+
+/*main container body styling*/
+.main-container{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	display: grid;
+	grid-template-columns: [first] 60% [line2] 40% [line3];
+	grid-template-rows: [row1-start] 720px [row1-end];
+}
+
+/*Part Left styling*/
+.billing-items{
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	display: grid;
+	grid-template-rows: [row1-start] 64px [row1-end row2-start] 64px [row2-end row3-start] 384px [row3-end row4-start] 256px [row4-end];
+	grid-template-columns: [first] 45% [line2] 28.5% [line3] 28.5% [line4];
+}
+.billing-items-header{
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	padding-top: 20px;
+	padding-left: 20px;
+	font-family: Century gothic;
+	color: #593221;
+}
+.billing-items-small-legends-1{
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	display: inline;
+	padding-left: 20px;
+	font-family: Century gothic;
+	color: #593221;
+}
+.billing-items-small-legends-2{
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	display: inline;
+	font-family: Century gothic;
+	color: #593221;
+}
+.billing-items-small-legends-3{
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	display: inline;
+	font-family: Century gothic;
+	color: #593221;
+}
+.billing-items-actual-list-1{
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	display: inline;
+	padding-left: 20px;
+	font-family: Century gothic;
+	color: #593221;
+	border-bottom: 3px solid #593221;
+}
+.billing-items-actual-list-2{
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	display: inline;
+	font-family: Century gothic;
+	color: #593221;
+	border-bottom: 3px solid #593221;
+}
+.billing-items-actual-list-3{
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	display: inline;
+	font-family: Century gothic;
+	color: #593221;
+	border-bottom: 3px solid #593221;
+}
+.billing-items-final{
+	grid-row-start: 4;
+	grid-row-end: 5;
+	grid-column-start: 2;
+	grid-column-end: 4;
+	display: inline;
+	text-align: right;
+	padding-right: 187px;
+	font-family: Century gothic;
+	color: #593221;
+}
+
+/*Part Right styling*/
+.more-items{
+	display: grid;
+	grid-template-columns: [first] 1fr [end];
+	grid-template-rows: [row1-start] 64px [row1-end row2-start] [row2-end row3-start] [row3-end row4-start] [row4-end row5-start] [row5-end];
+	padding-left: 50px;
+
+}
+.more-items-header{
+	font-family: Century gothic;
+	color: #593221;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.more-items-images{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	text-align:left;
+	font-family: Century gothic;
+	color: #593221;
+}
+
+
+/*styling for links*/
+a:link {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: #593221;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.button{
+	background-color: #fcb99d;
+  	border-radius: 10px;
+  	color: #593221;
+  	padding: 15px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	font-family: Century gothic;
+  	font-weight: bold;
+  	margin: 4px 2px;
+  	cursor: pointer;
+}
