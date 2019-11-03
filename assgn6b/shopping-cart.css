@@ -43,6 +43,13 @@ h2{
 	display: inline;
 	padding-right: 20px;
 }
+.cart{
+	padding-right:0px;
+}
+#cart-number{
+	font-weight: bolder;
+	font-size: 24px;
+}
 
 /*main container body styling*/
 .main-container{
@@ -63,13 +70,13 @@ h2{
 	grid-column-end: 2;
 	display: grid;
 	grid-template-rows: [row1-start] 64px [row1-end row2-start] 64px [row2-end row3-start] 384px [row3-end row4-start] 256px [row4-end];
-	grid-template-columns: [first] 45% [line2] 28.5% [line3] 28.5% [line4];
+	grid-template-columns: [first] 289px [line2] 138.5px [line3] 138.5px [line4] 201px [line5];
 }
 .billing-items-header{
 	grid-row-start: 1;
 	grid-row-end: 2;
 	grid-column-start: 1;
-	grid-column-end: 4;
+	grid-column-end: 5;
 	padding-top: 20px;
 	padding-left: 20px;
 	font-family: Century gothic;
@@ -79,7 +86,7 @@ h2{
 	grid-row-start: 2;
 	grid-row-end: 3;
 	grid-column-start: 1;
-	grid-column-end: 4;
+	grid-column-end: 2;
 	display: inline;
 	padding-left: 20px;
 	font-family: Century gothic;
@@ -103,7 +110,17 @@ h2{
 	font-family: Century gothic;
 	color: #593221;
 }
-.billing-items-actual-list-1{
+.billing-items-small-legends-4{
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 4;
+	grid-column-end: 5;
+	display: inline;
+	font-family: Century gothic;
+	color: #593221;
+}
+
+/*.billing-items-actual-list-1{
 	grid-row-start: 3;
 	grid-row-end: 4;
 	grid-column-start: 1;
@@ -134,16 +151,38 @@ h2{
 	color: #593221;
 	border-bottom: 3px solid #593221;
 }
+*/
+.main-shopping-list{
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	display: inline;
+	padding-left: 20px;
+	font-family: Century gothic;
+	color: #593221;
+}
 .billing-items-final{
 	grid-row-start: 4;
 	grid-row-end: 5;
-	grid-column-start: 2;
-	grid-column-end: 4;
+	grid-column-start: 3;
+	grid-column-end: 5;
 	display: inline;
 	text-align: right;
-	padding-right: 187px;
+	padding-right: 160px;
 	font-family: Century gothic;
 	color: #593221;
+}
+#myTable{
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+}
+.first-column{
+	width: 300px;
+}
+.other-column{
+	width: 150px;
 }
 
 /*Part Right styling*/
