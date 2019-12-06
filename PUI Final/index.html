@@ -2,14 +2,14 @@
 <head>
 	<title>World Airports Statistics</title>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://d3js.org/d3.v4.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.2"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
 	<script src="vega-lite-api.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="jumbotron text-center" style="margin-bottom:0">
@@ -32,6 +32,38 @@
         		<li><a href="#">Visual 3</a></li>
       		</ul>
     	</div>
-    </div>  	
+    </div>
+    <div class="row">
+    	<div class="visual1"></div>
+
+    	<script>
+    		d3 = require("d3@5", "d3-array@2");
+    		data1 = d3.csv("https://raw.githubusercontent.com/rituroy19/rituroy19.github.io/master/PUI%20Final/WorldPassengerData.csv");
+
+  			const brush = vl.selectInterval().encodings('x');
+  			const x = vl.x().fieldN('Year').title('Year');
+  
+  			const base = vl.markCircle()
+    			.encode(
+      				x, 
+      				vl.y().fieldQ('Total Passengers'),
+      				vl.tooltip('Total Passengers'))
+    			.width(700);
+  
+  			const graph1 = vl.data(data1)
+    			.vconcat(
+      				base.encode(x.scale({domain: brush})),
+      				base.select(brush).height(60)
+    			)
+    
+    	vegaEmbed("#visual1", graph1.toJSON())
+      	// result.view provides access to the Vega View API
+      	.then(result => console.log(result))
+      	.catch(console.warn); //Embed Risks graph in visual1 div	
+    	</script>
+
+    	<div class="visual2"></div>
+    	<div class="visual3"></div>
+    </div> 	
 </body>
 </html>		
