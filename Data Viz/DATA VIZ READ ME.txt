@@ -1,0 +1,13 @@
+Github hosted website and visualization code(all JS files contain codes for visualizations): https://github.com/mixichen/mixichen.github.io/tree/master/data_viz
+
+Project website URL: https://mixichen.github.io/data_viz/index.html#0
+
+Process slide URL: https://docs.google.com/presentation/d/1mBB5KUWF4nq86QBmfqY24miIX8N1jMgvHIolRKwG3mc/edit?usp=sharing
+
+Screen-cast video URL:https://youtu.be/obuSKsNA7sI
+
+Non-obvious features:
+• Slide 2 - Hover over graph for text changes
+• Slide 4 - Click on "Cigarettes" button to change options
+• Slide 6 - Select on bar graph to filter line graph
+
