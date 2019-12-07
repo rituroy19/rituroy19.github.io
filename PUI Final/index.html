@@ -1,117 +1,87 @@
 <!DOCTYPE html>
+
 <head>
 	<title>World Airports Statistics</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Load Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- Load jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Load d3.js -->
+	<script src="https://d3js.org/d3.v4.js"></script>
+  	<script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+  	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  	<!-- Load Vegalite-->
 	<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.12"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
-	<script src="vega-lite-api.js"></script>
+	<script src="Assets/js/vega-lite-api.js"></script>
 </head>
+
 <body>
+	<!-- Load Big Intro Text -->
 	<div class="jumbotron text-center" style="margin-bottom:0">
   		<h1>World's Busiest Airports</h1>
-  		<p>An insight into the biggest airports of planet Earth.</p> 
+  		<p>An insight into the biggest airports of planet Earth.</p>
 	</div>
-	<div class="container-fluid">
-    	<div class="navbar-header">
-      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>
-        		<span class="icon-bar"></span>                        
-      		 </button>
-      		 <a class="navbar-brand" href="#">World Airport Statistics</a>
-      	</div>
-      	<div class="collapse navbar-collapse" id="myNavbar">
-      		<ul class="nav navbar-nav">
-        		<li class="active"><a href="#">Visual 1</a></li>
-        		<li><a href="#">Visual 2</a></li>
-        		<li><a href="#">Visual 3</a></li>
-      		</ul>
+
+	<!-- Load Intro Para -->
+    <div class="row" style="padding: 40px">
+    	<div class="col-mid-12">
+    		<h1 style="padding-left: 40px">The Aviation Industry is booming!</h1>
+    		<br>
+    		<h4 style="padding-left: 40px">The net worth of the industry is around 35.5 billion US Dollars. In 2009, the aviation industry entered a golden age. Between 2009 and 2017, the revenue grew at a compund annual growth rate of 5.9% reaching 754 billion US Dollars in 2017.</h4>
+    		<br>
+    		<h4 style="padding-left: 40px">The annual growth rate of the number of passengers across airports is 3.5% compunded annually. It was around 1.467 billion passengers in 1998, around 3.979 billion passengers in 2017 and just this year it reached close to 9 billion passenegers per year (6.4% growth)!</h4>
     	</div>
     </div>
-    <div class="row">
-    	<div id="visual1"></div>
 
-    	<script>
-  			var data1 = [{"Year": 1970, "Total Passengers": 310441392},
-         {"Year": 1971, "Total Passengers": 331604904},
-         {"Year": 1972, "Total Passengers": 350114567},
-         {"Year": 1973, "Total Passengers": 401571800},
-         {"Year": 1974, "Total Passengers": 421145200},
-         {"Year": 1975, "Total Passengers": 432276500},
-         {"Year": 1976, "Total Passengers": 471773396},
-         {"Year": 1977, "Total Passengers": 513269292},
-         {"Year": 1978, "Total Passengers": 576090004},
-         {"Year": 1979, "Total Passengers": 648400600},
-         {"Year": 1980, "Total Passengers": 641572888},
-         {"Year": 1981, "Total Passengers": 640619400},
-         {"Year": 1982, "Total Passengers": 654482108},
-         {"Year": 1983, "Total Passengers": 685101596},
-         {"Year": 1984, "Total Passengers": 732410288},
-         {"Year": 1985, "Total Passengers": 783198104},
-         {"Year": 1986, "Total Passengers": 842594296},
-         {"Year": 1987, "Total Passengers": 904838104},
-         {"Year": 1988, "Total Passengers": 953896012},
-         {"Year": 1989, "Total Passengers": 983208800},
-         {"Year": 1990, "Total Passengers": 1025078089},
-         {"Year": 1991, "Total Passengers": 1133567400},
-         {"Year": 1992, "Total Passengers": 1145347659},
-         {"Year": 1993, "Total Passengers": 1142678545},
-         {"Year": 1994, "Total Passengers": 1233123465},
-         {"Year": 1995, "Total Passengers": 1303567456},
-         {"Year": 1996, "Total Passengers": 1391234346},
-         {"Year": 1997, "Total Passengers": 1455768942},
-         {"Year": 1998, "Total Passengers": 1467207211},
-         {"Year": 1999, "Total Passengers": 1562453234},
-         {"Year": 2000, "Total Passengers": 1674654321},
-         {"Year": 2001, "Total Passengers": 1655437165},
-         {"Year": 2002, "Total Passengers": 1627654821},
-         {"Year": 2003, "Total Passengers": 1665342556},
-         {"Year": 2004, "Total Passengers": 1889615234},
-         {"Year": 2005, "Total Passengers": 1970343221},
-         {"Year": 2006, "Total Passengers": 2072113245},
-         {"Year": 2007, "Total Passengers": 2209334689},
-         {"Year": 2008, "Total Passengers": 2208354215},
-         {"Year": 2009, "Total Passengers": 2250453321},
-         {"Year": 2010, "Total Passengers": 2628323554},
-         {"Year": 2011, "Total Passengers": 2787654345},
-         {"Year": 2012, "Total Passengers": 2894223465},
-         {"Year": 2013, "Total Passengers": 3048123786},
-         {"Year": 2014, "Total Passengers": 3227963456},
-         {"Year": 2015, "Total Passengers": 3466223549},
-         {"Year": 2016, "Total Passengers": 3705426543},
-         {"Year": 2017, "Total Passengers": 3974335356},
-         {"Year": 2018, "Total Passengers": 4233159834}
-         ];
+    <!-- Load Graph 1 and Text -->
+    <div class="row" style="padding: 40px">
+    	<div class="col-md-6">
+	    	<div id="visual1"></div>
+	    </div>
+	    <div class="col-md-6">
+	    	<h1 style="padding-left: 40px">A lens through the time</h1>
+	    	<br>
+	    	<h4 style="padding-left: 40px">Since 1970, less than 500,000 passengers used to travel via air. Now, you can see that number reach 4 billion passengers per year in 2018. This is exciting to see the dynamic change in the industry through this lens. Quite possibly, there can be some really interesting patterns of growth in different aspects.</h4>
+	    	<h4 style="padding-left: 40px">Select a portion of the graph in the lower graph to see the period in a larger frame of highlight.</h4>
+	    </div>
+	</div>
 
- 
-		const brush = vl.selectInterval().encodings('x');
-		const x = vl.x().fieldN('Year').title('Year');
-  
-		const base = vl.markCircle()
-    		.encode(
-      			x, 
-      			vl.y().fieldQ('Total Passengers'),
-      			vl.tooltip('Total Passengers'))
-    		.width(700);
-  
-  		const graph1 = vl.data(data1)
-    		.vconcat(
-      			base.encode(x.scale({domain: brush})),
-      			base.select(brush).height(60)
-    		)
-    
-    	vegaEmbed("#visual1", graph1.toJSON())
-      	// result.view provides access to the Vega View API
-      	.then(result => console.log(result))
-      	.catch(console.warn); //Embed Risks graph in visual1 div	
-    	</script>
+	<!-- Load Graph 2 and Text -->
+	<div class="row" style="padding: 40px">
+		<div class="col-md-4">
+			<h1 style="padding-left: 40px">Busiest Airports of all time</h1>
+	    	<br>
+	    	<h4 style="padding-left: 40px">Let's look at some of the busiest airports of the world since 2000 and how dramatically they have been changing. US clearly was the forerunner with majority passengers in the earlier years.</h4>
+	    	<h4 style="padding-left: 40px">Over the years, Asian countries have seen the majority growth with countries like China and UAE offering most flights to majority passengers at cheaper rates!</h4>
+	    	<h4 style="padding-left: 40px">Growth has fairly been constant for European countries. However, Atlanta airport remains to be at the top through the years, having a growth of about 3% passenegrs per year. It's still growing and is still unbeaten!</h4>
+	    </div>
+		<div class="col-md-8">
+			<div id="visual2"></div>
+		</div>
+	</div>
 
-    	<div class="visual2"></div>
-    	<div class="visual3"></div>
-    </div> 	
+	<!-- Load Graph 3 and Text-->
+    <div class="row" style="padding: 40px">
+    	<div class="col-md-8">
+	    	<div id="visual3"></div>
+	    </div>
+	    <div class="col-md-4">
+	    	<h2 style="padding-left: 40px">Connectedness of Airports</h2>
+	    	<br>
+	    	<h4 style="padding-left: 40px">It is interesting to compare  the connectedness of each airport. London remains to be the most connected, which makes sense as it is such centrally located on the world map. However, their growth has been sort of constant.</h4>
+	    	<h4 style="padding-left: 40px">Atlanta on the other hand has constantly been growing in terms of passenger capacity and ranks the top to be the busiest airport in the world for over 20 years. But it is not as connected as its European counter-parts.</h4>
+	    	<h4 style="padding-left: 40px">Click on any bar on the left graph to single out and see the trend of passengers over the years for that particular airport.</h4>
+	    </div>
+	</div>
+
+	<!-- Load JS Files-->
+	<script src="Assets/js/Graph1.js" type="text/javascript"></script>
+	<script src="Assets/js/Graph2.js" type="text/javascript"></script>
+	<script src="Assets/js/Graph3.js" type="text/javascript"></script>
+
 </body>
-</html>		
+</html>
