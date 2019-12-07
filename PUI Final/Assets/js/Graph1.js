@@ -1,3 +1,4 @@
+//loading the data in the js file itself
 var data1 = [{"Year": 1970, "Total Passengers": 310441392},
          {"Year": 1971, "Total Passengers": 331604904},
          {"Year": 1972, "Total Passengers": 350114567},
@@ -49,23 +50,27 @@ var data1 = [{"Year": 1970, "Total Passengers": 310441392},
          {"Year": 2018, "Total Passengers": 4233159834}
          ];
 
+//assigning a brush to the base graph to allow for select and magnifying the data in the other
 		const brush = vl.selectInterval().encodings('x');
 		const x = vl.x().fieldN('Year').axis({title:'Year', labelFontSize: 8, labelPadding: 5, titleFontSize: 20, titlePadding: 10});
-  
+
+//assigning the base graph  
 		const base = vl.markCircle()
     		.encode(
       			x, 
       			vl.y().fieldQ('Total Passengers').axis({titleFontSize: 20, labelFontSize: 15, labelPadding: 5, titlePadding: 10}),
       			vl.tooltip().fieldQ('Total Passengers').type('quantitative'))
     		.width(500);
-  
+
+//assigning both graphs together 
   		const graph1 = vl.data(data1)
     		.vconcat(
       			base.encode(x.scale({domain: brush})),
       			base.select(brush).height(100)
     		).title({text:"Airport Passengers over the Years", color:'black', fontSize: 20, anchor: 'middle', offset: 20})
-    
+ 
+//embedding in html   
     	vegaEmbed("#visual1", graph1.toJSON())
       	// result.view provides access to the Vega View API
       	.then(result => console.log(result))
-      	.catch(console.warn); //Embed Risks graph in visual1 div
+      	.catch(console.warn); //Embed graph in visual1 div
