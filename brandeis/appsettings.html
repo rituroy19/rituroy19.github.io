@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Policy Manager - App Settings</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Policy Manager</h1>
+        <!--<p class="view"><a href="http://github/placeholder">View the Project on GitHub <small>Placeholder/placeholder</small></a></p>
+        -->
+        <p class="view"><img src="assets/app_settings.png">Implemented version of App Settings in Policy Manager.</p> 
+      </header>
+      <section>
+        <h1>App Settings</h1>
+        <p>These are settings that apply to one single app. This screen will appear to a user in one of two scenarios:
+        	<ul>
+        		<li>When the user first installs an app</li>
+        		<li>When the user navigates there via the home screen or a notification</li>
+        	</ul>
+        </p>
+		<p>Permissions in app settings are divided into two categories:
+			<ul>
+				<li>App Internal Use: The data requested will be used by the app itself, or could be sent off of the device and possibly kept within the servers that the app communicates with. The data should not be shared with any external parties.</li>
+				<li>Third Party Use: The data requested will be shared with parties external to the company who developed this app. Typically, the data is being used for advertising or analytics purposes.</li>
+			</ul>
+			Third party policy setting cards also give the user the option to configure based on specific third party, if they press on the 'advanced' link.<br><br>
+			App settings may report that there may be no third party access, but it is possible the policy manager will detect third party access during the course of app use. If this happens, the user will be presented with a prompt to decide on a policy for this access.<br><br>
+			App settings are user settings, and thus are enforced with the lowest priority in CMUs policy enforcement algorithm. This means they are overridden by any active policy profiles, and quick settings. They are also subject to the 'most recent setting wins' rule, where a user setting most recently configured is the policy that is enforced.
+		</p>
+        <br><br>
+        <p><a href="brandeis_home.html">Go Back</a></p>
+       </section>
+    </div>
+  </body>
+</html>
