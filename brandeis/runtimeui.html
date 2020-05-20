@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Policy Manager - Runtime UI</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Policy Manager</h1>
+        <!--<p class="view"><a href="http://github/placeholder">View the Project on GitHub <small>Placeholder/placeholder</small></a></p>
+        <p class="view"><img src="assets/global_settings_app_controls.png">Implemented version of Runtime UI in Policy Manager.</p>
+    	-->
+      </header>
+      <section>
+        <h1>Runtime UI</h1>
+        <p>A user may decide to defer a policy decision, or may want to decide on a policy whenever that permission is actually requested in the app. If a user configures a policy setting to "ask", they will be presented with a prompt when the app requests the specified permission/purpose. The prompt will present the user with three options:
+			<ul>
+				<li>Only this time: Only this time, if selected, will temporarily remember your policy decision for five minutes. Once five minutes are up, the user will be prompted again for their policy decision if the app is still in use.</li>
+				<li>Always Allow: Always Allow will always allow the data access being prompted. It effectively will change the user's policy setting to be from "ask" to "on".</li>
+				<li>Always Deny: Always Deny works the same way Always Allow does, except it will deny access to the requested data.</li>
+			</ul>
+		Runtime UIs are a user setting, and thus are enforced with the lowest priority in CMU's policy enforcement algorithm. If a policy profile or quick setting are in effect, a runtime prompt will not be shown.
+		</p>
+        <br><br>
+        <p><a href="brandeis_home.html">Go Back</a></p>
+       </section>
+    </div>
+  </body>
+</html>
