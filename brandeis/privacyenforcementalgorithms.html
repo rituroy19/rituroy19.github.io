@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Policy Manager - Privacy Enforcement Algorithms</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Policy Manager</h1>
+        <!--<p class="view"><a href="http://github/placeholder">View the Project on GitHub <small>Placeholder/placeholder</small></a></p>
+        <p class="view"><img src="assets/global_settings_app_controls.png">Implemented version of Global Settings in Policy Manager.</p>
+    	-->
+      </header>
+      <section>
+        <h1>Privacy Enforcement Algorithms</h1>
+        <p>Carnegie Mellon University’s policy enforcement algorithm will enforce policies once it is selected as the policy manager to use on your device. The policy manager will be activated by PE for Android every time an app requests sensitive data, through a mechanism provided by PE for Android called onDangerousPermissionRequest.<br><br>
+
+        <!--<img src="xyz.png>-->
+
+		The policy manager is given the name of the app, the permission it is requesting, a purpose (if it was set programmatically) for data access, stacktraces and foreground activities. The policy manager will analyze stacktraces (which is an in-order list of code that caused the permission request) to attempt to infer a purpose. Once it inferred a purpose (if any could be determined), it begins the actual policy enforcement process, which the diagram below shows:
+
+		<!-- <img src="xyz.png>-->
+		</p>
+        <br><br>
+        <p><a href="brandeis_home.html">Go Back</a></p>
+       </section>
+    </div>
+  </body>
+</html>
