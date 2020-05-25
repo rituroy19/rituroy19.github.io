@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Policy Manager - UX Research & Design</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Policy Manager</h1>
+        <!--
+        <p class="view"><a href="http://github/placeholder">View the Project on GitHub <small>Placeholder/placeholder</small></a></p>
+        <p class="view"><img src="assets/AppSetting.gif">Animation made by Shan Wang</p>-->
+      </header>
+      <section>
+        <h1>UX Research Methods</h1>
+        <h3>PHASE 1</h3>
+        <h3>Card Sorting</h3>
+        <p>This method was used to figure out the right information hierarchy. Cards printed out with permission names and statements such as “what data this is for”, “why it was requested”, and “who’ll be using it” on each were given to users to organize based on their own mental model. The results show 80% of the users sorted them in a “what-why-where” sequence.</p>
+        <br><br>
+        
+        <h3>A/B Testing and Think-Alouds</h3> 
+        <p>Designing for such a complicated system and various user types means testing again and again. The most often used method is the simplest A/B testing combined with think-alouds. For each design decision, we usually develop multiple designs to test. Asking users to perform a task and thinking aloud helped us better understand the mindset of users, thus informed us how to proceed.</p>
+        <br><br>
+
+        <h3>Developer Walkthrough</h3>
+        <p>Figuring out exactly what and how much data will be shown on each page helped us refine the design. For instance, we applied a progressive disclosure fashion for global settings. This is because after checking the log data, we realized that there could be too long a list. We also walked through the design with developers to make sure all our designs are feasible under the current Android framework.</p><br><br>
+		
+		<h3>PHASE 2</h3>
+		<h3>Design Comprehension Surveys</h3>
+		<p>For the next phase, existing designs from phase 1 were tested through comprehension surveys on M-turk. In order to test the usefulness of previously designed interfaces, the survey was designed to gauge if people understood ‘where their data is going’ and ‘why their data is being used’. Survey results showed that the majority of users struggled to understand why apps were using their data and who was collecting their data.</p><br><br>
+		
+		<h3>Purpose Comprehension Participatory Design</h3>
+		<p>Poor results from comprehension surveys required a deeper understanding of the following: why many users struggled with understanding the designs, what their needs and preferences of privacy were, and what they wanted to learn from these interfaces. The participatory design activity was aimed to understand that. Interface designs were printed and given to participants who annotated them with what worked for them, what didn’t, and how they would like to improve it. This was followed by follow-up questions to understand why they prefer certain information and what needs aren’t being fulfilled for them.</p><br><br>
+		
+		<h3>Exploratory Interviews</h3>
+		<p>The participatory design activity made it clear that there were many unmet needs for users around mobile privacy. Exploratory interviews were conducted to understand current behavior of users, current limitations they deal with and their mental model around dealing with mobile privacy. Analysis of interviews showed that many users find maintaining privacy settings on mobile cumbersome, confusing and time-taking. They fully don’t understand why their data is being used which hinders them to take appropriate actions. The analysis pointed out at opportunities to make mobile privacy usable, informative, and suggestive.</p><br><br>
+
+		<h3>Concept Testing</h3>
+		<p>Findings from research were useful to inform new design rationale to iterate on previous interface design. Research suggested making policy manager more usable - hence the app setting and global setting screens were redesigned and the new concepts were tested with users to understand if it matches their needs and serves them well. In order to make it more informative - data frequency graph was introduced, and to make it more suggestive - recommendations were introduced. Concepts addressing varying needs for them were also developed and tested with users. Preferences from each concept were noted and all interface designs were reiterated to adjust to user needs.</p><br><br>
+		
+		<h3>Usability Testing</h3>
+		<p>In order to the usefulness and usability of the entire app, usability tests were conducted. Specific tasks were designed to gauge if users can meet their needs and think-aloud protocol was conducted to better understand their mental models behind their actions, preferences and needs. Results showed that most users were satisfied with the policy manager with a NPS score of 20 suggesting positive feedback towards it. Usefulness rating was 6.2 while usability rating was 5.2.<br><br>The complexity and novelty of the policy manager is hard to comprehend for users on the very first go and to combat that, various on-boarding features were designed to make users aware of the capabilities and usefulness of the policy manager. The videos demonstrate the final designed version of Policy Manager.</p><br><br>
+
+		<h3>Heuristic Evaluation</h3>
+		<p>Using Neilsen-Molich’s 10 principles for heuristic evaluations, we analysed the final interface designs to achieve consistency of design, flexibility and error prevention for users, and overall ease of use and aesthetic design for the first public launch of PE-Android and Policy Manager.</p><br><br><br>
+
+		<h1>Interface Design Rationales</h1>
+		<h3>PHASE 1</h3>
+		<h3>Creating the information framework</h3>
+		<p>Major interfaces were designed with the ‘what-why-who’ structure to display information<br>
+		<img src=""></p><br><br>
+
+		<h3>Designing the Zoomin UI with Progressive Disclosure</h3>
+		<p>Information on accessing permission by apps were broken down and displayed in chunks so as to be discovered one at a time and for better understanding of the relationship between the ‘what-why-who’ structure.<br>
+		<img src=""></p><br><br>
+
+		<h3>PHASE 2</h3>
+		<h3>Re-designing interface to match user's mental model</h3>
+		<p>Design patterns from existing android setting designs were incorporated to match user’s expectations of current android settings and to match their mental model of the ways users maintain their privacy settings.<br>
+		<img src=""><img src=""></p><br><br>
+
+		<h3>Re-designing the Zooming UI for ease of use and understanding</h3>
+		<p>The Zooming UI was simplified to make information more glanceable and comprehensive along with giving appropriate cues to dive deeper into the Zooming UI.<br>
+		<img src=""><img src=""><img src=""></p><br><br>
+
+		<h3>Providing flexibility to explore information in different views</h3>
+		<p>Filters are provided on multiple features to allow users to find, retrieve, and explore information in ways that suits them the best.<br>
+		<img src=""><img src=""><img src=""><img src=""></p><br><br>
+
+		<h3>Confirming the actions taken by users with feedback and visual cues</h3>
+		<p>Designs incorporating visual cues and confirmation cards are deployed throughout the features to ensure users understand the system state and the outcome of the actions they take.<br>
+		<img src=""><img src=""><img src=""><img src=""></p><br><br>
+
+		<h3>Guiding users to discover features and capabilities with on-boarding features</h3>
+		<p>On-boarding features were designed throughout the first-time use of the policy manager to ensure users don’t miss knowing  the capabilities of policy manager and to ensure they understand what they can achieve with it.<br>
+		<img src=""><img src=""></p><br><br>
+
+
+		</section>
+		
+		<footer>
+		</footer>
+
+	</div>
+	<script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
