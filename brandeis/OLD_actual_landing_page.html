@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>CMU Mobile Privacy Research</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Project Brandeis</h1>
+        <h3>Mobile Privacy Research</h3>
+        <p>Carnegie Mellon University X DARPA</p>
+        <p>A team of research and privacy experts' contribution to a new future for Mobile Privacy. The following projects and research papers were produced during the course of the DARPA Brandeis Project, or had a major impact on Brandeis at CMU.</p>
+        <!--<p class="view"><a href="http://github/placeholder">View the Project on GitHub <small>Placeholder/placeholder</small></a></p>
+        <p class="view"><img src="assets/AppSetting.gif">Animation made by Shan Wang</p> -->
+      </header>
+      <section>
+        <h2>Policy Manager</h2>
+        <p>The policy manager gives Android users fine-grained control over sensitive data accesses on their phones, and provides context for these accesses through purposes. The policy manager is built on top of PE for Android. See more: <a href="brandeis_home.html">Policy Manager</a></p><br><br>
+
+        <h2>Coconut</h2>
+        <p>Coconut is an Android Studio plugin developed using IntelliJ, which requires developers to annotate any kind of access or storage of privacy-sensitive user data. These annotations can then be used to generate privacy policies for end-users. It also provides additional guidelines for developers on better privacy practices and risks. See more: <a href="https://coconut-ide.github.io/">Coconut IDE</a></p>
+        <p><a href="https://dl.acm.org/doi/pdf/10.1145/3287056">Research Paper on Coconut</a><br>“Coconut: An IDE Plugin for Developing Privacy-Friendly Apps”. Tianshi Li, Yuvraj Agarwal, Jason I. Hong. In Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Volume 2 Issue 4, December 2018.</p>
+        <p>There is a PE for Android-enabled version of Coconut, which generates policy files for the policy manager and integrates with the PE for Android SDK. See more: LINK?</p><br><br>
+
+        <h2>MobiPurpose</h2>
+        <p><a href="https://dl.acm.org/doi/pdf/10.1145/3287051">Research Paper on MobiPurpose</a><br>"Why Are They Collecting My Data? Inferring the Purposes of Network Traffic in Mobile Apps." Jin, Haojian, Minyi Liu, Kevan Dodhia, Yuanchun Li, Gaurav Srivastava, Matthew Fredrikson, Yuvraj Agarwal, and Jason I. Hong. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 2, no. 4 (2018): 1-27.</p><br><br>
+
+        <h2>Purpose Inference</h2>
+        <p><a href="https://dl.acm.org/doi/pdf/10.1145/3086677">Research Paper on Purpose Inference</a><br>"Understanding the purpose of permission use in mobile apps." Wang, Haoyu, Yuanchun Li, Yao Guo, Yuvraj Agarwal, and Jason I. Hong. ACM Transactions on Information Systems (TOIS) 35, no. 4 (2017): 1-40.</p><br><br>
+
+        <h2>PrivacyGrade</h2>
+        <p>PrivacyGrade assigns privacy grades to apps based on crowdsourced information on people’s privacy expectations. It also allows users to view more in-depth and detailed data regarding what data apps collect, for what reason and where that data goes. See more: <a href="http://privacygrade.org/">PrivacyGrade</a></p><br><br>
+
+        <h2>PrivacyProxy</h2>
+        <p>PrivacyProxy is an app that allows users to control privacy sensitivity settings by filtering sensitive data that leaves the device via the network.See more: <a href="https://play.google.com/store/apps/details?id=io.privacyproxy.android&hl=en_US">Download PrivacyProxy</a></p>
+        <p><a href="https://arxiv.org/pdf/1708.06384.pdf">Research Paper on PrivacyProxy</a><br>"PrivacyProxy: Leveraging Crowdsourcing and In Situ Traffic Analysis to Detect and Mitigate Information Leakage." Srivastava, Gaurav, Kunal Bhuwalka, Swarup Kumar Sahoo, Saksham Chitkara, Kevin Ku, Matt Fredrikson, Jason Hong, and Yuvraj Agarwal. arXiv preprint arXiv:1708.06384 (2017).</p><br><br>
+
+        <h2>PrivacyStreams</h2>
+        <p>PrivacyStreams allows developers to write code that preserves a user’s privacy through an easy-to-use API based on Java streams. See more: <a href="https://github.com/PrivacyStreams/">PrivacyStreams</a></p>
+        <p><a href="https://dl.acm.org/doi/pdf/10.1145/3130941">Research Paper on PrivacyStreams</a><br>"Privacystreams: Enabling transparency in personal data processing for mobile apps." Li, Yuanchun, Fanglin Chen, Toby Jia-Jun Li, Yao Guo, Gang Huang, Matthew Fredrikson, Yuvraj Agarwal, and Jason I. Hong. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 1, no. 3 (2017): 1-26.</p>
+        <p>There is a PE for Android-enabled version of PrivacyStreams, which serializes PrivacyStream queries as JSON objects, and executes the code remotely in a PE for Android PAL module. This version of PrivacyStreams guarantees additional privacy, because the code that accesses sensitive data is executed in a trusted source (the OS). See more: LINK?</p><br><br>
+
+        <h2>Protect My Privacy</h2>
+        <p>Protect My Privacy is an app that allows users to control what data apps on their phone are allowed to collect. The Android version expands on the iOS version by allowing users to allow or deny sensitive data accesses to third-party libraries (such as advertisers), and includes a minimal purpose taxonomy.<br>
+
+        iOS: <a href="http://www.protectmyprivacy.org/">Download iOS App</a><br>Android: <a href="http://www.android.protectmyprivacy.org/">Download Android App</a></p>
+        
+        <p><a href="https://www.synergylabs.org/yuvraj/docs/Chitkara_Ubicomp2017_ContextAwarePrivacy.pdf">Research paper 1</a><br>"Does this app really need my location? Context-aware privacy management for smartphones." Chitkara, Saksham, Nishad Gothoskar, Suhas Harish, Jason I. Hong, and Yuvraj Agarwal. Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 1, no. 3 (2017): 1-22.</p>
+
+        <p><a href="https://www.synergylabs.org/yuvraj/docs/Agarwal_MobiSys2013_ProtectMyPrivacy.pdf">Research paper 2</a><br>"Protectmyprivacy: detecting and mitigating privacy leaks on ios devices using crowdsourcing." Yuvraj Agarwal and Malcolm Hall. In MobiSys 2013 - Proceedings of the 11th Annual International Conference on Mobile Systems, Applications, and Services, 97–109. 2013. doi:10.1145/2462456.2464460.</p><br><br>
+
+        <h2>UX Research and Design</h2>
+        <p>Intensive user experience research and design led to the final development of architecture and interface of the policy manager. Many UX research methods were adopted and conducted that led to informing design decisions for the interface. You can find more details in the link below. See more: <a href="brandeis_ux.html">UX Research and Design</a></p><br><br>
+
+       </section>
+    </div>
+  </body>
+</html>
